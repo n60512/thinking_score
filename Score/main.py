@@ -2,33 +2,13 @@ from DBConnection import DBConnection
 from pandas import DataFrame
 import jieba
 
-"""
-class segmentation(object):
-    
-    def __init__(self):
-        super(segmentation, self).__init__()
-        # jieba custom setting.
-        jieba.set_dictionary('jieba_dict/dict.txt.big')
-        pass
-        
-    
-    def testing(self,val):
-        # 默認是精確模式
-        seg_list = jieba.cut(val)
-        print("默認是精確模式: ")
-        for i in seg_list:
-            print(i)
-        pass
-"""    
-
-
 def segmentation(text):
     seg_list = jieba.cut(text)
     return seg_list
 
 if __name__ == "__main__":
 
-    jieba.set_dictionary('jieba_dict/dict.txt.big')
+    jieba.set_dictionary('Score\jieba_dict\dict.txt.big')
     DBconn = DBConnection()
 
 
@@ -63,12 +43,6 @@ if __name__ == "__main__":
         print('')
 
         pass
-
-    #seg = segmentation('台北天氣真好')
-
-
-    
-
 
 
     pass
